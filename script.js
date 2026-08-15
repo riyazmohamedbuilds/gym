@@ -39,7 +39,7 @@ window.addEventListener('scroll', () => {
 // ACTIVE NAVIGATION LINK HIGHLIGHTING
 // ========================================
 
-const sections = document.querySelectorAll('section[id]');
+const sections = document.querySelectorAll('section[id], div[id]');
 const navLinks = document.querySelectorAll('.nav-link');
 
 window.addEventListener('scroll', () => {
