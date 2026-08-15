@@ -183,7 +183,11 @@ a:hover {
     align-items: center;
     justify-content: space-between;
 }
-
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 .navbar-logo .logo-text {
     font-size: 1.5rem;
     font-weight: 700;
