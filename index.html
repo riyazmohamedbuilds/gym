@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NODE THE GYM - Premium fitness destination in Thiruvarur. Train consistently, build strength, and transform your fitness. Open 5:30 AM - 9:30 PM.">
+    <meta name="keywords" content="gym, fitness, Thiruvarur, strength training, sauna">
+    <meta name="author" content="NODE THE GYM">
+    <title>NODE THE GYM | Premium Fitness Gym in Thiruvarur</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <img src="images/node.jpg" alt="NODE THE GYM">
+                <span class="logo-text">NODE THE GYM</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#facilities" class="nav-link">Facilities</a></li>
+                <li class="nav-item"><a href="#membership" class="nav-link">Membership</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-cta">Join Now</button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">BUILD YOUR STRENGTH.<br>DEFINE YOURSELF.</h1>
+            <p class="hero-subtitle">Train with purpose. Progress with precision. Transform your fitness at NODE THE GYM.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" id="join-btn">Join Now</button>
+                <button class="btn btn-secondary" id="explore-btn">Explore the Gym</button>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2 class="section-title">About NODE THE GYM</h2>
+                    <p class="about-text">
+                        NODE THE GYM is a premier fitness destination in Thiruvarur dedicated to helping members train consistently, build strength, and improve their overall fitness. We believe in creating an environment where discipline meets performance, where every rep counts, and where your goals become reality.
+                    </p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <h3>Location</h3>
+                            <p>No 2/6, Pangal Road<br>near Sahara Supermarket<br>Santhamangalam, Madappuram<br>Thiruvarur, Tamil Nadu 610001</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Hours</h3>
+                            <p>5:30 AM – 9:30 PM<br>Open Daily</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="placeholder-image">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=600&fit=crop" alt="NODE THE GYM - Gym interior with fitness equipment" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FACILITIES SECTION -->
+    <section id="facilities" class="facilities">
+        <div class="container">
+            <h2 class="section-title">Premium Facilities</h2>
+            <p class="section-subtitle">Everything you need for serious training</p>
+            <div class="facilities-grid">
+                <div class="facility-card">
+                    <div class="facility-icon">🔥</div>
+                    <h3>Sauna</h3>
+                    <p>Premium recovery facility for muscle relaxation and wellness. Enhance your post-training recovery and overall fitness journey.</p>
+                </div>
+            </div>
+            <p class="facilities-note">More facilities coming soon. Contact us to learn about our complete offerings.</p>
+        </div>
+    </section>
+
+    <!-- MEMBERSHIP SECTION -->
+    <section id="membership" class="membership">
+        <div class="container">
+            <h2 class="section-title">Membership Plans</h2>
+            <p class="section-subtitle">Find the plan that fits your goals</p>
+            <div class="membership-grid">
+                <div class="membership-card">
+                    <h3>Flexible Plans</h3>
+                    <p class="membership-description">Choose from monthly, quarterly, or annual membership options tailored to your fitness journey.</p>
+                    <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Enquire Now</button>
+                </div>
+                <div class="membership-card">
+                    <h3>Premium Access</h3>
+                    <p class="membership-description">Get full access to all gym facilities, premium equipment, and sauna amenities.</p>
+                    <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Enquire Now</button>
+                </div>
+                <div class="membership-card">
+                    <h3>Custom Plans</h3>
+                    <p class="membership-description">Looking for something specific? Contact us to discuss custom membership packages for your needs.</p>
+                    <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Enquire Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY NODE THE GYM SECTION -->
+    <section class="why-us">
+        <div class="container">
+            <h2 class="section-title">Why NODE THE GYM</h2>
+            <div class="why-us-grid">
+                <div class="why-us-card">
+                    <h3>Train Consistently</h3>
+                    <p>With extended hours (5:30 AM - 9:30 PM), fit your training into your schedule. No excuses.</p>
+                </div>
+                <div class="why-us-card">
+                    <h3>Build Strength</h3>
+                    <p>Premium equipment and facilities designed for serious strength training and progressive development.</p>
+                </div>
+                <div class="why-us-card">
+                    <h3>Stay Disciplined</h3>
+                    <p>A community focused on consistency, progress, and the discipline required to transform your fitness.</p>
+                </div>
+                <div class="why-us-card">
+                    <h3>Improve Fitness</h3>
+                    <p>Comprehensive facilities and a results-driven environment to support your fitness goals.</p>
+                </div>
+                <div class="why-us-card">
+                    <h3>Make Progress</h3>
+                    <p>Track your journey, celebrate your wins, and continuously improve with premium training facilities.</p>
+                </div>
+                <div class="why-us-card">
+                    <h3>Recovery Focus</h3>
+                    <p>Premium sauna facility to support recovery, wellness, and long-term fitness sustainability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>READY TO START?</h2>
+            <p>Take the first step toward your fitness goals. Join NODE THE GYM and become part of a community dedicated to strength, discipline, and progress.</p>
+            <button class="btn btn-large" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">JOIN NODE THE GYM</button>
+        </div>
+    </section>
+
+    <!-- CONTACT / ENQUIRY SECTION -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-form-wrapper">
+                    <h2 class="section-title">Get Started Today</h2>
+                    <p class="section-subtitle">Fill out the form below and we'll be in touch shortly</p>
+                    
+                    <form id="enquiry-form" class="enquiry-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your full name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="093605 32990" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="interested-in">Interested In</label>
+                            <select id="interested-in" name="interested-in" required>
+                                <option value="">Select an option</option>
+                                <option value="membership">Membership</option>
+                                <option value="gym-enquiry">Gym Enquiry</option>
+                                <option value="sauna">Sauna</option>
+                                <option value="general">General Enquiry</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Tell us more about your fitness goals..." rows="5"></textarea>
+                        </div>
+
+                        <div id="form-error" class="form-error"></div>
+                        <button type="submit" class="btn btn-primary btn-full">Submit Enquiry</button>
+                        <div id="form-success" class="form-success" style="display: none;">
+                            ✓ Thank you! We've received your enquiry. We'll contact you soon.
+                        </div>
+                    </form>
+                </div>
+
+                <div class="contact-info-wrapper">
+                    <h2 class="section-title">Contact Information</h2>
+                    
+                    <div class="contact-info-card">
+                        <h3>Address</h3>
+                        <p>No 2/6, Pangal Road<br>
+                        near Sahara Supermarket<br>
+                        Santhamangalam, Madappuram<br>
+                        Thiruvarur, Tamil Nadu 610001</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <h3>Phone</h3>
+                        <p><a href="tel:09360532990" class="contact-link">093605 32990</a></p>
+                        <p class="contact-note">Click to call directly</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <h3>Hours</h3>
+                        <p>Monday - Sunday<br>5:30 AM – 9:30 PM</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <button class="btn btn-secondary" onclick="window.open('https://maps.google.com/?q=No 2/6, Pangal Road, Santhamangalam, Madappuram, Thiruvarur, Tamil Nadu 610001', '_blank')">Get Directions</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION SECTION -->
+    <section id="location" class="location">
+        <div class="container">
+            <h2 class="section-title">Find Us</h2>
+            <div class="location-content">
+                <div class="location-info">
+                    <h3>NODE THE GYM Location</h3>
+                    <p class="location-address">
+                        No 2/6, Pangal Road<br>
+                        near Sahara Supermarket<br>
+                        Santhamangalam, Madappuram<br>
+                        Thiruvarur, Tamil Nadu 610001
+                    </p>
+                    <button class="btn btn-primary" onclick="window.open('https://maps.google.com/?q=No 2/6, Pangal Road, Santhamangalam, Madappuram, Thiruvarur, Tamil Nadu 610001', '_blank')">Get Directions on Google Maps</button>
+                </div>
+                <div class="location-placeholder">
+                    <div class="map-placeholder">
+                        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=600&h=400&fit=crop" alt="Gym location - Thiruvarur" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>NODE THE GYM</h3>
+                    <p class="footer-tagline">Build Your Strength. Define Yourself.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#facilities">Facilities</a></li>
+                        <li><a href="#membership">Membership</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><a href="tel:09360532990">093605 32990</a></p>
+                    <p>5:30 AM – 9:30 PM Daily</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Location</h4>
+                    <p>No 2/6, Pangal Road<br>Thiruvarur, Tamil Nadu 610001</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 NODE THE GYM. All rights reserved.</p>
+                <button class="btn btn-secondary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Join Now</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
