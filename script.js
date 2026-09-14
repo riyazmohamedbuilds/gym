@@ -94,12 +94,13 @@ if (exploreBtn) {
 // FORM VALIDATION & SUBMISSION
 // ========================================
 
+
 const enquiryForm = document.getElementById('enquiry-form');
 const formError = document.getElementById('form-error');
 const formSuccess = document.getElementById('form-success');
 
 if (enquiryForm) {
-    enquiryForm.addEventListener('submit', (e) => {
+    enquiryForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         // Get form values
@@ -109,87 +110,84 @@ if (enquiryForm) {
         const interestedIn = document.getElementById('interested-in').value;
         const message = document.getElementById('message').value.trim();
 
-        // Clear previous error messages
+        // Clear previous messages
         formError.classList.remove('show');
         formError.textContent = '';
+        formSuccess.style.display = 'none';
 
-        // Validation logic
+        // Validation
         let errors = [];
 
-        // Validate name
         if (name === '') {
             errors.push('Full name is required');
         } else if (name.length < 2) {
             errors.push('Full name must be at least 2 characters');
         }
 
-        // Validate phone
         if (phone === '') {
             errors.push('Phone number is required');
         } else if (!isValidPhone(phone)) {
             errors.push('Please enter a valid phone number');
         }
 
-        // Validate email
         if (email === '') {
             errors.push('Email address is required');
         } else if (!isValidEmail(email)) {
             errors.push('Please enter a valid email address');
         }
 
-        // Validate interested in
         if (interestedIn === '') {
             errors.push('Please select what you are interested in');
         }
 
-        // Validate message (optional but if provided, should have minimum length)
         if (message !== '' && message.length < 5) {
             errors.push('Message must be at least 5 characters if provided');
         }
 
-        // If there are errors, display them
+        // Show validation error
         if (errors.length > 0) {
             formError.classList.add('show');
-            formError.textContent = errors[0]; // Show first error
+            formError.textContent = errors[0];
             return;
         }
 
-        // If no errors, show success message and reset form
-        formSuccess.style.display = 'block';
-        enquiryForm.style.display = 'none';
+        // Send form to Formspree
+        try {
+            const response = await fetch(enquiryForm.action, {
+                method: 'POST',
+                body: new FormData(enquiryForm),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
 
-        // Reset form after 3 seconds
-        setTimeout(() => {
-            enquiryForm.reset();
-            enquiryForm.style.display = 'block';
-            formSuccess.style.display = 'none';
-        }, 3000);
+            if (response.ok) {
+    // Reset the form
+    enquiryForm.reset();
 
-        // Log form data for backend integration (when backend is ready)
-        const formData = {
-            name: name,
-            phone: phone,
-            email: email,
-            interestedIn: interestedIn,
-            message: message,
-            timestamp: new Date().toISOString()
-        };
-        
-        console.log('Form submitted:', formData);
-        
-        // TODO: Send to backend API when ready
-        // fetch('/api/enquiry', {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json',
-        //     },
-        //     body: JSON.stringify(formData)
-        // })
-        // .then(response => response.json())
-        // .then(data => console.log('Success:', data))
-        // .catch(error => console.error('Error:', error));
+    // Show success message
+    formSuccess.style.display = 'block';
+
+    // Hide success message after 3 seconds
+    setTimeout(() => {
+        formSuccess.style.display = 'none';
+    }, 3000);
+
+} else {
+    formError.classList.add('show');
+    formError.textContent = 'Something went wrong. Please try again.';
+}
+
+        } catch (error) {
+            console.error('Form submission error:', error);
+
+            formError.classList.add('show');
+            formError.textContent = 'Unable to submit enquiry. Please check your internet connection.';
+        }
     });
 }
+
+
 
 // ========================================
 // VALIDATION HELPER FUNCTIONS
